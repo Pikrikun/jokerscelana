@@ -521,6 +521,20 @@
             cursor: pointer;
         }
 
+        .variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 16px;
+}
+
+/* Tambahan opsional jika ingin tampilan lebih optimal di layar sangat kecil */
+@media (max-width: 480px) {
+  .variant-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
